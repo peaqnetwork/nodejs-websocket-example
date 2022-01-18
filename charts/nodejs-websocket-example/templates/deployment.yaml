@@ -52,7 +52,7 @@ spec:
         envFrom:
 {{ toYaml .Values.envFrom | indent 10 }}
         ports:
-        - name: http
+        - name: tcp
           containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
           tcpSocket:
