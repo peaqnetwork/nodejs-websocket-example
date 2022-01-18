@@ -65,7 +65,7 @@ service:
   name: nodejs-websocket-example
   type: ClusterIP
   externalPort: 80
-  internalPort: 3000
+  internalPort: 3001
   protocol: TCP
   annotations: {}
   # Add labels to the service
