@@ -56,7 +56,7 @@ spec:
           containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
           tcpSocket:
-            #path: {{ .Values.livenessProbe.probePath | default .Values.probePath }}
+            path: {{ .Values.livenessProbe.probePath | default .Values.probePath }}
             port: {{ .Values.service.internalPort }}
           initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
           periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
@@ -64,7 +64,7 @@ spec:
           timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
         readinessProbe:
           tcpSocket:
-            #path: {{ .Values.readinessProbe.probePath | default .Values.probePath }}
+            path: {{ .Values.readinessProbe.probePath | default .Values.probePath }}
             port: {{ .Values.service.internalPort }}
           initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
           periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
