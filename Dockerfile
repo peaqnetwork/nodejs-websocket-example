@@ -1,6 +1,7 @@
-FROM node:12-slim
-ENV PORT 3000
-EXPOSE 3000
-WORKDIR /usr/src/app
-COPY . .
-CMD ["npm", "start"]
+FROM python:3.9-alpine
+
+RUN pip install websockets
+
+COPY app.py .
+
+CMD ["python", "app.py"]
