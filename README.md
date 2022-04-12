@@ -1,4 +1,4 @@
-# nodejs-websocket-example
+# nodejs-websocket-example updated
 it is an example of implementing websocket(ws) on both server and client side
 
 ## Install

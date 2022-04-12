@@ -5,7 +5,7 @@ spec:
   - name: pr
     context: "pr"
     always_run: false
-    optional: false
+    optional: true
     source: "pullrequest.yaml"
   postsubmits:
   - name: release
