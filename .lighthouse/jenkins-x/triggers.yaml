@@ -4,8 +4,8 @@ spec:
   presubmits:
   - name: pr
     context: "pr"
-    always_run: true
-    optional: false
+    always_run: false
+    optional: true
     source: "pullrequest.yaml"
   postsubmits:
   - name: release
